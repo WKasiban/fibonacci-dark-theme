@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fibonacci Algorithms</h1>
+        <section class="method">
+            <h2>Method 1 : recursion</h2>
+        <pre>
+    <code>
+    function fib(n) {
+        return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+    } 
+    
+    console.log(fib(20));
+    </code>
+        </pre>
+            <p>Result: <span id="result1"></span></p>
+        </section>
+        <hr>
+        <section class="method">
+            <h2>Method 2 : dynamic programming bottom-up</h2>
+            <pre>
+    <code>
+    function newFib(n) {
+        let a = 1;
+        let b = 1;
+        for (let i = 3; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+    console.log(newFib(20));
+    </code>
+            </pre>
+            <p>Result: <span id="result2"></span></p>
+        </section>
+        <hr>
+        <section class="mesurement">
+            <p>Press Command + Option + C (Mac) or Control + Shift + C (Windows, Linux, Chrome OS) to view the performance result in your console view.</p>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

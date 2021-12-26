@@ -1,0 +1,55 @@
+:root {
+    --background: #121212;
+    --menu-bar: #181818;
+    --top-gradient: #404040;
+    --bottom-gradient: #282828;
+    --primary-text: #ffffff;
+    --secondary-text: #b3b3b3;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+    background-color: var(--background);
+    color: var(--primary-text);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+pre {
+    background-color: var(--top-gradient);
+    width: 90%;
+}
+
+.mesurement {
+    background-color: var(--bottom-gradient);
+    padding-left: 1em;
+    margin-top: 2em;
+}
+
+span {
+    color: var(--secondary-text);
+}
+
+hr {
+    border: 1px solid var(--secondary-text);
+    width: 100%;
+}
+
+.method {
+    margin-bottom: 2em;
+}
